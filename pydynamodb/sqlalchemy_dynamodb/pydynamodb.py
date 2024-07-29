@@ -108,7 +108,7 @@ class DynamoDBStatementCompiler(SQLCompiler):
             }
         )
 
-        crud_params = crud._get_crud_params(self, insert_stmt, compile_state, **kw)
+        crud_params = crud._get_crud_params(self, insert_stmt, compile_state, toplevel=True, **kw)
 
         if (
             not crud_params
